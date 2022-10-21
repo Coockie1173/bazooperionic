@@ -1,0 +1,7 @@
+{
+  "name": "Bazooper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
