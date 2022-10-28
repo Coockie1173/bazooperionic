@@ -1,0 +1,17 @@
+button
+{
+    width: 100%;
+    height: 100%;
+}
+
+.checked
+{
+    background-image: url("../../../assets/BazooTile.png");
+    color:black;
+}
+
+.unchecked
+{
+    background-color: white;
+    color:black;
+}

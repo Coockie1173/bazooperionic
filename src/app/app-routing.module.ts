@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'bazoopergame',
+    loadChildren: () => import('./bazoopergame/bazoopergame.module').then( m => m.BazoopergamePageModule)
+  },
 ];
 
 @NgModule({

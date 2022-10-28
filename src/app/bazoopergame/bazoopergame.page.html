@@ -1,0 +1,14 @@
+<ion-content [fullscreen]="true">
+  <div class="BazooperBoard" id="container">
+    <img src="../../assets/{{GifName}}.gif" class="Centerme" [hidden]="DSH.ButtonsEnabled">
+    <table class="BazooperTable">
+      <tr *ngFor="let i of numSequence(DSH.BoardSize); let y = index" class="BazooperRow">
+        <td *ngFor="let j of numSequence(DSH.BoardSize); let x = index" class="BazooperItem" [ngStyle]="GetSquareSize()">
+          <div class="BazooperDiv" [ngStyle]="GetSquareSize()">
+            <app-bazooperbutton [MyID]="y * DSH.BoardSize + x" [MyText]="shuffledArray[y * DSH.BoardSize + x]" (OnStateChange)="CheckBazooper($event)"></app-bazooperbutton>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</ion-content>

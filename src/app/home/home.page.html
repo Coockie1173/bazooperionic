@@ -1,20 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar class="Centerer">
+    <p>Board Size</p>
+    <div>    
+      <ion-range [min]="2" [max]="10" [ticks]="true" [snaps]="true" (ionChange)="OnRangeChange($event)"></ion-range>
+      <p [innerText]="SelectedValue"></p>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="no-scroll">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Bazooper</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <img src="../../assets/Splash.png"/>    
   </div>
 </ion-content>
+
+<ion-footer>
+  <input type="file" (change)="onFileChange($event)" id="HiddenUplaod" hidden="true"/>
+  <ion-button expand="block" [disabled]="!SelectedLengthValid" (click)="StartBazooper()">Start Bazoopering</ion-button>
+  <div class="Flexer" *ngIf="!InputType">
+    <ion-button expand="block" onclick="HiddenUplaod.click()" class="Long ion-text-wrap">Upload words</ion-button>
+    <ion-button expand="block" (click)="ChangeInputType()" class="Short ion-text-wrap">Manual Input</ion-button>
+  </div>
+  <div *ngIf="InputType" class="Flexer">
+    <ion-textarea [rows]="10" (ionChange)="WordListChanged($event)" class="WalterWhiter"></ion-textarea>
+    <ion-button expand="block" (click)="ChangeInputType()" class="Short ion-text-wrap">File upload</ion-button>
+  </div>  
+</ion-footer>

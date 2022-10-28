@@ -1,0 +1,47 @@
+/*.BazooperBoard{
+    height: 100vmin;
+    width: 100vmin;
+}*/
+
+.BazooperDiv
+{
+    overflow:hidden;
+    height: 20vmin;
+    width: 20vmin;
+}
+
+.BazooperItem{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    width: 20vmin;
+    height: 20vmin;
+    line-break: auto;
+}
+
+
+.BazooperTable{
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/*
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}*/
+
+.Centerme
+{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}

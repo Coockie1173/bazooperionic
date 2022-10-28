@@ -25,3 +25,35 @@
 #container a {
   text-decoration: none;
 }
+
+.Centerer
+{
+  text-align: center;
+}
+
+.Long
+{
+  width: 80%;
+}
+
+.Short
+{
+  width: 20%;
+}
+
+.WalterWhiter
+{
+  background-color: white;
+  color: black;
+  overflow-y: auto;
+  height: 100px;
+}
+
+.Flexer
+{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
